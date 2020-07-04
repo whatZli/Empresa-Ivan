@@ -1,0 +1,8 @@
+[2020-07-02 20:40:47] [ TRACE] [Main:39] Cargando datos empresa
+[2020-07-02 20:40:49] [ INFO ] [Main:55] Se ha encontrado el cliente
+[2020-07-02 20:42:04] [ WARN ] [OperacionesCliente:58] No hay conexión a la base de datos
+[2020-07-02 20:42:44] [ TRACE] [Main:39] Cargando datos empresa
+[2020-07-02 20:42:47] [ INFO ] [Main:55] Se ha encontrado el cliente
+[2020-07-02 20:42:48] [ WARN ] [OperacionesCliente:58] No hay conexión a la base de datos
+[2020-07-02 20:43:41] [ TRACE] [Main:39] Cargando datos empresa
+[2020-07-02 20:43:43] [ INFO ] [Main:55] Se ha encontrado el cliente
