@@ -1,0 +1,16 @@
+[2020-07-07 16:13:44] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-07 16:13:45] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-07 16:20:00] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-07 16:20:00] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-07 16:22:14] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-07 16:22:15] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-07 16:33:50] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-07 16:33:51] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-07 16:38:14] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-07 16:38:15] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-07 16:38:31] [ WARN ] [SqlExceptionHelper:137] SQL Error: 0, SQLState: 08S01
+[2020-07-07 16:38:31] [ ERROR] [SqlExceptionHelper:142] Communications link failure
+
+The last packet successfully received from the server was 10.220 milliseconds ago.  The last packet sent successfully to the server was 10.221 milliseconds ago.
+[2020-07-07 16:38:47] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-07 16:38:48] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)

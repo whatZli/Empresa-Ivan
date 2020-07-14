@@ -17,38 +17,45 @@ import javax.persistence.Table;
  * @author Formacion
  */
 
-@Entity
-@Table(name = "cliente")
 public class Cliente extends Persona {
+	
+	private int id;
 
-	@Id
-    @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String cod_cliente;
 
-    @Column
     private String password;//Campo añadido a mayores para hacer el login
 
-    @Column
     private int p_acumulado;
 
-    @Column
     private float saldo;
 
     //private enum categoria {
     //    normal, premium
     //};
+    
+    public Cliente() {}
 
-    public Cliente(String cod_cliente, String password, int p_acumulado, float saldo, String nombre, String apellido1, String apellido2, String dni, String email, String sexo, String f_alta, String f_baja, boolean activo) {
+    public Cliente(int id, String cod_cliente, String password, int p_acumulado, float saldo, String nombre, String apellido1, String apellido2, String dni, String email, String sexo, String f_alta, String f_baja, boolean activo) {
         super(nombre, apellido1, apellido2, dni, email, sexo, f_alta, f_baja, activo);
+        this.id = id;
         this.cod_cliente = cod_cliente;
         this.password = password;
         this.p_acumulado = p_acumulado;
         this.saldo = saldo;
 
     }
+    
+    
 
-    public String getCod_cliente() {
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getCod_cliente() {
         return cod_cliente;
     }
 

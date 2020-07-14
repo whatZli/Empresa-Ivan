@@ -20,9 +20,9 @@ public interface IDepComun {
 
     public int checkCorreoNoLeido(Trabajador t);
 
-    public void checkCorreoDiaConcreto();
+    public void checkCorreoDiaConcreto(Trabajador t);
 
-    public void checkCorreoEntreFechas();
+    public void checkCorreoEntreFechas(Trabajador t);
 
     public void enviarCorreoJefeDept();
 

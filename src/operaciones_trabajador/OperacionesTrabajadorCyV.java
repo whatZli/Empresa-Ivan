@@ -16,17 +16,18 @@ import interfaces_operaciones.IDepVentas;
  * @author Formacion
  */
 public class OperacionesTrabajadorCyV implements IDepComun, IDepCompras, IDepVentas {
+	
+	@Override
+	public void checkCorreoDiaConcreto(Trabajador t) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    //Mal implementado*
-    @Override
-    public void checkCorreoDiaConcreto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void checkCorreoEntreFechas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public void checkCorreoEntreFechas(Trabajador t) {
+		// TODO Auto-generated method stub
+		
+	}
 
     @Override
     public void enviarCorreoJefeDept() {
@@ -72,5 +73,7 @@ public class OperacionesTrabajadorCyV implements IDepComun, IDepCompras, IDepVen
     public int checkCorreoNoLeido(Trabajador t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+	
 
 }

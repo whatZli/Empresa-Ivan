@@ -44,8 +44,10 @@ public class SwitchTrabajadorComun {
                 } while (menuComprobarNL != 0);
                 break;
             case 4:
+            	otc.checkCorreoDiaConcreto(userTraLogueado);
                 break;
             case 5:
+            	otc.checkCorreoEntreFechas(userTraLogueado);
                 break;
 
         }

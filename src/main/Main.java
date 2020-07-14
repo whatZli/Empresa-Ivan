@@ -5,11 +5,14 @@
  */
 package main;
 
+import java.util.List;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import app_empresa.Cliente;
 import app_empresa.Empresa;
@@ -26,73 +29,66 @@ import menu.MenuLogin;
  */
 public class Main {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        //DeclaraciÃ³n de variables
-        MenuLogin ml = new MenuLogin();
-        Login l = new Login();
-        Trabajador userTraLogueado = null;
-        Cliente userCliLogueado = null;
-        //Logger
-        Logger logger = LogManager.getLogger(Main.class);
-        //ClassLoader loader = Thread.currentThread().getContextClassLoader();
-		//URL url = loader.getResource("log4j.properties");
-		//PropertyConfigurator.configure(url);
-		//logger.info("Este es el fichero de configuración: " + url);
+		// DeclaraciÃ³n de variables
+		MenuLogin ml = new MenuLogin();
+		Login l = new Login();
+		Trabajador userTraLogueado = null;
+		Cliente userCliLogueado = null;
+		Boolean salir=false;
+		// Logger
+		Logger logger = LogManager.getLogger(Main.class);
 
-        
-        
-        
-        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
-        
-        Session session = sessionFactory.openSession();
+		SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
+		Session session = sessionFactory.openSession();
 
-        Transaction tr = session.beginTransaction();
-        Cliente c = new Cliente("c3", "p", 0, 0, "Cliente3", "Apellido3", "Apellido2", "71041502E", "cliente3" + "@gmail.com", "Mujer", "22-06-2020", null, true);
-        session.save(c);
-        tr.commit();
-        System.out.println("Se guardó satisfactoriamente");
-        sessionFactory.close();
-        
-        
-        
-        
-        //Crear empresa y carga de datos
-        Empresa nuevaEmpresa = CargaEmpresa.CargaEmpresa();
-        logger.trace("Cargando datos empresa");
+		// Crear empresa y carga de datos
+		Empresa nuevaEmpresa = CargaEmpresa.CargaEmpresa();
+		logger.trace("Cargando datos empresa");
 
-        //Lanzar formulario login
-        do {
-            String usuarioContrasena = ml.formularioLogIn();
+		// Lanzar formulario login
+		do {
 
-            String[] aUsuarioContrasena = usuarioContrasena.split("-");
-            String usuarioIntroducido = aUsuarioContrasena[0];
-            String passwordIntroducido = aUsuarioContrasena[1];
 
-            userTraLogueado = l.validarUsuarioContrasenaTrabajador(usuarioIntroducido, passwordIntroducido, nuevaEmpresa);
+			if (!salir) {
+				String usuarioContrasena = ml.formularioLogIn();
 
-            if (userTraLogueado == null) {//Si no hay un trabajador se va a buscar un cliente
-                userCliLogueado = l.validarUsuarioContrasenaCliente(usuarioIntroducido, passwordIntroducido, nuevaEmpresa);
+				String[] aUsuarioContrasena = usuarioContrasena.split("-");
+				String usuarioIntroducido = aUsuarioContrasena[0];
+				String passwordIntroducido = aUsuarioContrasena[1];
 
-                if (userCliLogueado != null) {//Si se obtiene un cliente
-                	logger.info("Se ha encontrado el cliente");
-                    SwitchClientes.switchClientes(userCliLogueado);
+				userTraLogueado = l.validarUsuarioContrasenaTrabajador(usuarioIntroducido, passwordIntroducido,
+						nuevaEmpresa);
 
-                } else {//Si no se ha encontrado un Trabajador ni un Cliente
-                    //System.out.println("No se ha encontrado el usuario");
-                    logger.info("No se ha encontrado el usuario");
-                }
-            }
+				if (userTraLogueado == null) {// Si no hay un trabajador se va a buscar un cliente
+					userCliLogueado = l.validarUsuarioContrasenaClienteBD(usuarioIntroducido, passwordIntroducido);
 
-            if (userTraLogueado != null) {
+					if (userCliLogueado != null) {// Si se obtiene un cliente
+						logger.info("Se ha encontrado el cliente");
+						SwitchClientes.switchClientes(userCliLogueado);
 
-            	logger.info("Se ha encontrado el trabajador");
-                SwitchTrabajadores.switchTrabajadores(userTraLogueado, nuevaEmpresa);
+					} else {// Si no se ha encontrado un Trabajador ni un Cliente
+						// System.out.println("No se ha encontrado el usuario");
+						logger.info("No se ha encontrado el usuario");
+					}
+				}
 
-            }
+				if (userTraLogueado != null) {
 
-        } while (userTraLogueado == null || userCliLogueado == null);
+					logger.info("Se ha encontrado el trabajador");
+					SwitchTrabajadores.switchTrabajadores(userTraLogueado, nuevaEmpresa);
 
-    }
+				}
+			}
+			if(salir) {
+				System.out.println("Saliendo de la aplicación");
+				break;
+			}
+			salir = ml.formularioSalir();
+
+		} while (userTraLogueado == null || userCliLogueado == null);
+
+	}
 
 }

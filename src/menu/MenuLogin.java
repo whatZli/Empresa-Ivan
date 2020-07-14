@@ -5,6 +5,8 @@
  */
 package menu;
 
+import java.util.Scanner;
+
 import app_empresa.Persona;
 
 /**
@@ -13,51 +15,64 @@ import app_empresa.Persona;
  */
 public class MenuLogin extends Menu {
 
-    public String formularioLogIn() {
-        System.out.println("********************************");
-        System.out.println("***   Formulario de acceso   ***");
-        System.out.println("********************************");
-        System.out.print("***   Usuario: ");
-        String usuario = sc.nextLine();
-        System.out.print("***   Password: ");
-        String password = sc.nextLine();
-        System.out.println("********************************");
-        System.out.println();
+	public Boolean formularioSalir() {
+		Scanner scan = new Scanner(System.in);
+		int respuesta;
+		System.out.println("�Desea salir de la aplicaci�n? (0 para salir 1 para seguir)");
+		respuesta = scan.nextInt();
 
-        return usuario + "-" + password;
-    }
+		if (respuesta == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
-    public void comprobarFormulario() {
-        System.out.println("********************************");
-        System.out.println("***  Comprobando el usuario  ***");
-        System.out.println("***      y la contraseña     ***");
-        System.out.println("********************************");
-        System.out.println();
+	public String formularioLogIn() {
+		System.out.println("********************************");
+		System.out.println("***   Formulario de acceso   ***");
+		System.out.println("********************************");
+		System.out.print("***   Usuario: ");
+		String usuario = sc.nextLine();
+		System.out.print("***   Password: ");
+		String password = sc.nextLine();
+		System.out.println("********************************");
+		System.out.println();
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
+		return usuario + "-" + password;
+	}
 
-    }
+	public void comprobarFormulario() {
+		System.out.println("********************************");
+		System.out.println("***  Comprobando el usuario  ***");
+		System.out.println("***      y la contraseña     ***");
+		System.out.println("********************************");
+		System.out.println();
 
-    public void bienvenida(Persona p) {
-        System.out.println("********************************");
-        if (p.getSexo() == "Hombre") {
-            System.out.println("***  Bienvenido " + p.getNombre() + " ***");
-        } else {
-            System.out.println("***  Bienvenida " + p.getNombre() + " ***");
-        }
-        System.out.println("_________________________________");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException ex) {
+			Thread.currentThread().interrupt();
+		}
 
-    }
+	}
 
-    public void errorFormulario() {
-        System.out.println("********************************");
-        System.out.println("*Usuario o contraseña no válido");
-        System.out.println("*Introduzca de nuevo el usuario");
+	public void bienvenida(Persona p) {
+		System.out.println("********************************");
+		if (p.getSexo() == "Hombre") {
+			System.out.println("***  Bienvenido " + p.getNombre() + " ***");
+		} else {
+			System.out.println("***  Bienvenida " + p.getNombre() + " ***");
+		}
+		System.out.println("_________________________________");
 
-        this.formularioLogIn();
-    }
+	}
+
+	public void errorFormulario() {
+		System.out.println("********************************");
+		System.out.println("*Usuario o contraseña no válido");
+		System.out.println("*Introduzca de nuevo el usuario");
+
+		this.formularioLogIn();
+	}
 }

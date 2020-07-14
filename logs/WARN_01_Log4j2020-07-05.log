@@ -1,0 +1,154 @@
+[2020-07-05 17:14:04] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:15:09] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:16:16] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:17:31] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:21:17] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:27:30] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:28:24] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:28:45] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:31:15] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:38:59] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:39:40] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:40:39] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:45:32] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-05 17:45:32] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:45:33] [ ERROR] [HibernateUtils:32] HibernateUtils.buildSessionFactory(): Initial SessionFactory creation failed.
+org.hibernate.MappingException: Could not determine type for: String, at table: cliente, for columns: [org.hibernate.mapping.Column(ID)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:488)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:455)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:268)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:343)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:461)
+	at hibernate.HibernateUtils.buildSessionFactory(HibernateUtils.java:28)
+	at hibernate.HibernateUtils.<clinit>(HibernateUtils.java:18)
+	at main.Main.main(Main.java:46)
+[2020-07-05 17:46:37] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-05 17:46:37] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:46:38] [ ERROR] [HibernateUtils:32] HibernateUtils.buildSessionFactory(): Initial SessionFactory creation failed.
+org.hibernate.MappingException: Could not determine type for: String, at table: cliente, for columns: [org.hibernate.mapping.Column(cod_cliente)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:488)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:455)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:268)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:343)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:461)
+	at hibernate.HibernateUtils.buildSessionFactory(HibernateUtils.java:28)
+	at hibernate.HibernateUtils.<clinit>(HibernateUtils.java:18)
+	at main.Main.main(Main.java:46)
+[2020-07-05 17:47:22] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-05 17:47:23] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:47:24] [ WARN ] [SessionFactoryRegistry:101] HHH000277: Could not bind factory to JNDI
+org.hibernate.engine.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:124)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:140)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:88)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:388)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at hibernate.HibernateUtils.buildSessionFactory(HibernateUtils.java:28)
+	at hibernate.HibernateUtils.<clinit>(HibernateUtils.java:18)
+	at main.Main.main(Main.java:46)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(Unknown Source)
+	at javax.naming.InitialContext.getDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getNameParser(Unknown Source)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:118)
+	... 7 more
+[2020-07-05 17:47:24] [ WARN ] [SessionFactoryRegistry:131] HHH000374: Could not unbind factory from JNDI
+org.hibernate.engine.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:124)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.unbind(JndiServiceImpl.java:208)
+	at org.hibernate.internal.SessionFactoryRegistry.removeSessionFactory(SessionFactoryRegistry.java:124)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:836)
+	at main.Main.main(Main.java:55)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(Unknown Source)
+	at javax.naming.InitialContext.getDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getNameParser(Unknown Source)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:118)
+	... 4 more
+[2020-07-05 17:48:03] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-05 17:48:03] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:48:04] [ WARN ] [SessionFactoryRegistry:101] HHH000277: Could not bind factory to JNDI
+org.hibernate.engine.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:124)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:140)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:88)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:388)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at hibernate.HibernateUtils.buildSessionFactory(HibernateUtils.java:28)
+	at hibernate.HibernateUtils.<clinit>(HibernateUtils.java:18)
+	at main.Main.main(Main.java:46)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(Unknown Source)
+	at javax.naming.InitialContext.getDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getNameParser(Unknown Source)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:118)
+	... 7 more
+[2020-07-05 17:49:07] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-05 17:49:07] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:49:08] [ WARN ] [SessionFactoryRegistry:101] HHH000277: Could not bind factory to JNDI
+org.hibernate.engine.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:124)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:140)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:88)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:388)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at hibernate.HibernateUtils.buildSessionFactory(HibernateUtils.java:28)
+	at hibernate.HibernateUtils.<clinit>(HibernateUtils.java:18)
+	at main.Main.main(Main.java:46)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(Unknown Source)
+	at javax.naming.InitialContext.getDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getNameParser(Unknown Source)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:118)
+	... 7 more
+[2020-07-05 17:49:09] [ WARN ] [SessionFactoryRegistry:131] HHH000374: Could not unbind factory from JNDI
+org.hibernate.engine.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:124)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.unbind(JndiServiceImpl.java:208)
+	at org.hibernate.internal.SessionFactoryRegistry.removeSessionFactory(SessionFactoryRegistry.java:124)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:836)
+	at main.Main.main(Main.java:55)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(Unknown Source)
+	at javax.naming.InitialContext.getDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getNameParser(Unknown Source)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:118)
+	... 4 more
+[2020-07-05 17:49:27] [ WARN ] [deprecation:75] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2020-07-05 17:49:28] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2020-07-05 17:49:30] [ WARN ] [SessionFactoryRegistry:101] HHH000277: Could not bind factory to JNDI
+org.hibernate.engine.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:124)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:140)
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:88)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:388)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at hibernate.HibernateUtils.buildSessionFactory(HibernateUtils.java:28)
+	at hibernate.HibernateUtils.<clinit>(HibernateUtils.java:18)
+	at main.Main.main(Main.java:46)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(Unknown Source)
+	at javax.naming.InitialContext.getDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getNameParser(Unknown Source)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:118)
+	... 7 more
+[2020-07-05 17:49:30] [ WARN ] [SessionFactoryRegistry:131] HHH000374: Could not unbind factory from JNDI
+org.hibernate.engine.jndi.JndiException: Error parsing JNDI name []
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:124)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.unbind(JndiServiceImpl.java:208)
+	at org.hibernate.internal.SessionFactoryRegistry.removeSessionFactory(SessionFactoryRegistry.java:124)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:836)
+	at main.Main.main(Main.java:55)
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(Unknown Source)
+	at javax.naming.InitialContext.getDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(Unknown Source)
+	at javax.naming.InitialContext.getNameParser(Unknown Source)
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:118)
+	... 4 more

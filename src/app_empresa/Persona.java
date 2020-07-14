@@ -20,6 +20,8 @@ public class Persona {
     private String f_alta;
     private String f_baja;
     private boolean activo;
+    
+    public Persona() {}
 
     public Persona(String nombre, String apellido1, String apellido2, String dni, String email, String sexo, String f_alta, String f_baja, boolean activo) {
         this.nombre = nombre;
